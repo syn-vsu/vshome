@@ -1,0 +1,32 @@
+- key: Name
+  value: V0JT3CH $UJ@N
+- key: Description
+  value:
+    - "Hello!^2000"
+    - Freelancer
+    - Consultant
+    - Programmer
+    - Data engineer
+    - "Skills >  ^1000"
+    - "Skills > Data:"
+    - "Skills > Data: BIG data"
+    - "Skills > Data: SQL"
+    - "Skills > Data: Databricks"
+    - "Skills > Data: ADF"
+    - "Skills > Data: Power BI"
+    - "Skills > Programming: ^1000" 
+    - "Skills > Programming: html"
+    - "Skills > Programming: css"
+    - "Skills > Programming: javascript"
+    - "Skills > Programming: VBA"
+    - "Skills > Programming: python"
+    - <i>... and many more.</i> ^1000
+  typed: true
+
+
+- key: Contact
+  value:
+    - key: Email
+      value: info-blesk.0u@icloud.com
+      url: "mailto:info-blesk.0u@icloud.com"
+
