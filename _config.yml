@@ -38,6 +38,7 @@ plugins:
 #  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # color_bg: teal-9
 color_key: green-6
