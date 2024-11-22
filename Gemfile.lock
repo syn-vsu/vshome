@@ -326,6 +326,7 @@ DEPENDENCIES
   github-pages
   hacked-jekyll (~> 3.0)
   http_parser.rb (~> 0.6.0)
+  jekyll-remote-theme
   jekyll-seo-tag
   jekyll-sitemap
   tzinfo (>= 1, < 3)
