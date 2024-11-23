@@ -24,15 +24,16 @@ title: v0jt3ech $uj@n
 #  OK Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
-baseurl: "/vshome" # the subpath of your site, e.g. /blog
-url: "https://syn-vsu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/vshome" # the subpath of your site, e.g. /blog
+# url: "https://syn-vsu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: hello
 # github_username:  jekyll
 
 # Build settings
 # theme: minima
-# theme: hacked-jekyll
-remote theme: piazzai/hacked-jekyll
+theme: hacked-jekyll
+# remote theme: piazzai/hacked-jekyll
+# remote_theme: MichaelCurrin/jekyll-theme-quickstart
 # theme: jekyll-theme-minimal
 plugins:
 #  - jekyll-feed
