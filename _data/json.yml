@@ -15,11 +15,13 @@
     - "Skills > Data: ADF"
     - "Skills > Data: Power BI"
     - "Skills > Programming: ^1000" 
-    - "Skills > Programming: html"
+    - "Skills > Programming: python"
+    - "Skills > Programming: spark"
+    - "Skills > Programming: Power Query - M"
+    - "Skills > Programming: VBA"
     - "Skills > Programming: css"
     - "Skills > Programming: javascript"
-    - "Skills > Programming: VBA"
-    - "Skills > Programming: python"
+    - "Skills > Programming: html"
     - <i>... and many more.</i> ^1000
   typed: true
 
