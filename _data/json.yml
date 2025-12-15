@@ -1,27 +1,14 @@
 - key: Name
-  value: V0JT3CH $UJ@Nn
-- key: Description
+  value: V0JT3CH $UJ@N
+  url: "./profile.html"
+- key: "Core Expertise"
   value:
-    - "Hello!^2000"
-    - Freelancer
-    - Consultant
-    - Programmer
-    - Data engineer
-    - "Skills >  ^1000"
-    - "Skills > Data:"
-    - "Skills > Data: BIG data"
-    - "Skills > Data: SQL"
-    - "Skills > Data: Databricks"
-    - "Skills > Data: ADF"
-    - "Skills > Data: Power BI"
-    - "Skills > Programming: ^1000" 
-    - "Skills > Programming: python"
-    - "Skills > Programming: spark"
-    - "Skills > Programming: Power Query - M"
-    - "Skills > Programming: VBA"
-    - "Skills > Programming: css"
-    - "Skills > Programming: javascript"
-    - "Skills > Programming: html"
+    - "Data Engineering & BI (Azure, Databricks, Power BI)"
+    - "Data Platforms & ETL Pipelines"
+    - "Analytics & Data Visualization"
+    - "Automation & Business Process Optimization"
+    - "ERP & Enterprise Systems"
+    - "IT Consulting & Solution Design"
     - <i>... and many more.</i> ^1000
   typed: true
 
@@ -32,3 +19,44 @@
       value: info-blesk.0u@icloud.com
       url: "mailto:info-blesk.0u@icloud.com"
 
+- key: Key Skills & Technologies
+  value:
+    - key: Data & BI
+      value: "<br> · Azure Data Platform, Databricks, ADF<br> · Power BI, DAX, Power Query, SSMS, SSRS<br> · Spark, Python, SQL"
+    - key: Automation & Cloud
+      value: "<br> · Logic Apps, Power Automate, O365, SharePoint<br> · DevOps, CI/CD, Governance"
+    - key: Enterprise Systems
+      value: "<br> · ERP systems, SQL, VBA, JS<br> · Jira, Confluence"
+
+- key: Professional Experience
+  value: 
+    - "Designing and delivering end-to-end <strong>data and BI solutions</strong> on Azure"
+    - "Coordinating <strong>development</strong> and operations across BI and ERP environments"
+    - "Supporting users, resolving incidents, and managing data/report lifecycles"
+    - "Implementing <strong>automation</strong> to <strong>improve efficiency</strong> and <strong>reduce manual work</strong>"
+  
+- key: "Consulting & Business Background"
+  value:
+    - "IT consulting and solution architecture"
+    - "Business development and product launches"
+    - "Data-driven decision support (analytics, forecasting, financials)"
+    - "E-commerce, digital marketing, and sales analytics"
+
+- key: "Industries & Use Cases"
+  value:
+    - "Business Intelligence & Analytics"
+    - "ERP & Operations"
+    - "Finance & Reporting"
+    - "E-commerce & Digital Services" 
+
+
+- key: Education & Certifications
+  value:
+    - key: Education
+      value: "<br> · Engineer of Economics (Ing.)<br>  University of Economics, Faculty of Economic Informatics"
+    - key: Selected Certifications & Professional Training
+      value: 
+        - "<br> · Change management in IT <br> · Development workflow with AI powered tools"
+        - "<br> · Power BI Data Analyst Associate<br> · AI for Developers & Azure OpenAI Service"
+        - "<br> · Project Management & Agile Mindset<br> · Synology Value Added Reseller"
+        - "<br> · Yeastar Certified Cloud Associate<br> · Apple Product Professional – Gold Level<br> · Navision Sales Representative"

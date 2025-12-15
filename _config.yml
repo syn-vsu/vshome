@@ -53,7 +53,8 @@ color_value: green-4
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+    - getthisdomain.html
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

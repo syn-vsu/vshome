@@ -1,0 +1,125 @@
+---
+layout: default
+---
+{% case site.quotes -%}
+{% when 'keys' -%}
+  {% assign quote_key = '"' -%}
+  {% assign quote_value = '' -%}
+{% when 'values' -%}
+  {% assign quote_key = '' -%}
+  {% assign quote_value = '"' -%}
+{% when false -%}
+  {% assign quote_key = '' -%}
+  {% assign quote_value = '' -%}
+{% else -%}
+  {% assign quote_key = '"' -%}
+  {% assign quote_value = '"' -%}
+{% endcase -%}
+
+{% if site.commas == false -%}
+  {% assign comma = '' -%}
+{% else -%}
+  {% assign comma = ',' -%}
+{% endif -%}
+
+{% if site.newtab == true -%}
+  {% assign tab = '_blank' -%}
+{% else -%}
+  {% assign tab = '_self' -%}
+{% endif -%}
+
+<div id="json">
+  {% for pair in site.data.json %}
+  <div class="my ms">
+
+    {%- comment -%} 1) typed sekcia (Core Expertise) {%- endcomment -%}
+    {% if pair.typed -%}
+      <div id="strings">
+        {% for value in pair.value -%}
+          <span>{{ value }}</span>
+        {%- endfor %}
+      </div>
+      {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
+      {{ quote_value }}<span class="value"><span id="typed"></span></span>{{ quote_value }}
+
+    {%- comment -%}
+      2) pair.value je pole objektov (má .key) – Contact, Key Skills & Technologies, profiles
+    {%- endcomment -%}
+  {% elsif pair.value and pair.value.first and pair.value.first.key -%}
+  {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}: [
+  {% for value in pair.value -%}
+
+    {%- comment -%}
+      3. úroveň: value.value je pole STRINGOV (· Azure..., · Power BI..., ...)
+    {%- endcomment -%}
+    {% if value.value and value.value.first and value.value.first.key == nil %}
+      <p class="ms">
+        {{ quote_key }}<span class="key">{{ value.key }}</span>{{ quote_key }}:
+        <br>
+        {% for sub in value.value -%}
+          <span class="value">{{ sub }}</span>
+          {%- unless forloop.last -%}<br>{%- endunless -%}
+        {%- endfor %}
+      </p>
+
+
+
+        {%- comment -%} 2b) odkaz (Contact: Email; Profiles položky s url) {%- endcomment -%}
+        {% elsif value.url %}
+          <p class="ms">
+            {% if value.key %}
+              {{ quote_key }}<span class="key">{{ value.key }}</span>{{ quote_key }}:
+            {% endif %}
+            {{ quote_value }}<a class="value" href="{{ value.url | relative_url }}" target="{{ tab }}">{{ value.value }}</a>{{ quote_value }}
+            {%- unless forloop.last -%}
+              {{ comma }}
+            {%- endunless %}
+          </p>
+
+        {%- comment -%} 2c) obyčajný key/value (napr. profiles s bodkami) {%- endcomment -%}
+        {% else %}
+          <p class="ms">
+            {% if value.key %}
+              {{ quote_key }}<span class="key">{{ value.key }}</span>{{ quote_key }}:
+            {% endif %}
+            {{ quote_value }}<span class="value">{{ value.value }}</span>{{ quote_value }}
+            {%- unless forloop.last -%}
+              {{ comma }}
+            {%- endunless %}
+          </p>
+        {% endif %}
+      {%- endfor -%}
+      ]
+
+    {%- comment -%}
+      3) pair.value je jednoduché pole scalarov (bez .key)
+    {%- endcomment -%}
+    {% elsif pair.value and pair.value.first and pair.value.first.key == nil -%}
+      {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}: [
+      {% for value in pair.value -%}
+        <p class="ms">
+          {{ quote_value }}<span class="value">{{ value }}</span>{{ quote_value }}
+          {%- unless forloop.last -%}
+            {{ comma }}
+          {%- endunless %}
+        </p>
+      {%- endfor -%}
+      ]
+
+    {%- comment -%} 4) jednoduchý odkaz na úrovni pair {%- endcomment -%}
+    {% elsif pair.url -%}
+      {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
+      {{ quote_value }}<a class="value" href="{{ pair.url | relative_url }}" target="{{ tab }}">{{ pair.value }}</a>{{ quote_value }}
+
+    {%- comment -%} 5) fallback: jednoduchý key/value (Name) {%- endcomment -%}
+    {% else -%}
+      {{ quote_key }}<span class="key">{{ pair.key }}</span>{{ quote_key }}:
+      {{ quote_value }}<span class="value">{{ pair.value }}</span>{{ quote_value }}
+    {%- endif -%}
+
+    {%- unless forloop.last -%}
+      {{ comma }}
+    {%- endunless %}
+  </div>
+  {% endfor %}
+</div>
