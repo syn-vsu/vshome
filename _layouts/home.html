@@ -27,7 +27,6 @@ layout: default
 {% else -%}
 {% assign tab = '_self' -%}
 {% endif -%}
-
 <div id="json">
   {% for pair in site.data.json %}
   <div class="my ms">
@@ -94,4 +93,45 @@ layout: default
   </div>
   {% endfor %}
 </div>
+<button id="copy-skills-text" class="ms">Copy skills to Clippboard</button>
+<span id="copy-skills-status" class="ms"></span>
 {{ content }}
+<style>
+  .menu {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    font-size: 1em;
+  }
+</style>
+<div class="menu"><a href="./profile">NEXT ></a></div>
+<script>
+  const skillsText = `
+Key Skills & Technologies 
+  Data & BI
+    - Azure Data Platform, Databricks, ADF
+    - Power BI, DAX, Power Query, SSMS, SSRS
+    - Spark, Python, SQL
+  Automation & Cloud
+    - Logic Apps, Power Automate, O365, SharePoint
+    - DevOps, CI/CD, Governance
+  Enterprise Systems
+    - ERP systems, SQL, VBA, JS
+    - Jira, Confluence    
+`.trim();
+
+  async function copySkillsText() {
+    try {
+      await navigator.clipboard.writeText(skillsText);
+      document.getElementById('copy-skills-status').textContent = 'Copied ✅';
+    } catch (e) {
+      document.getElementById('copy-skills-status').textContent = 'Copy failed';
+      console.error(e);
+    }
+  }
+
+  document
+    .getElementById('copy-skills-text')
+    .addEventListener('click', copySkillsText);
+</script>
+

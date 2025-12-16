@@ -22,19 +22,19 @@
       rgba(0, 0, 0, 1) 3px
     );
   mix-blend-mode: overlay;
-  opacity: 0.9;
+  opacity: 0.6;
 
 } 
 
 
 
 /* Glitch effect for .key elements */
-.key {
+.key, h2 {
   position: relative;
   transition: color 0.1s ease, transform 0.1s ease;
 }
 
-.key:hover {
+.key:hover, h2:hover {
   animation: key-glitch 300ms steps(1, end) 1;
 }
 

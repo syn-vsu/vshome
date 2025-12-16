@@ -1,5 +1,5 @@
 ---
-permalink: /profile.html
+permalink: /core.html
 layout: default
 ---
 
@@ -41,18 +41,42 @@ layout: default
 </style>
 
 <div class="container">
-  <h1>Professional profile</h1>
-   <h3>Data Engineering | Business Intelligence | Automation</h3>
+  <h2><span id="typed"></span></h2>
+   
 
-  <p><strong>Senior Data Engineer</strong> and <strong>Solution Manager</strong> with strong expertise in Azure-based <strong>Big Data</strong> and <strong>Business Intelligence</strong> solutions. Specializes in end-to-end data platforms, including data ingestion, ETL pipelines (Databricks, Azure Data Factory), advanced analytics (Spark, Python, Power Query, DAX), and enterprise <strong>Power BI</strong> governance and delivery.
-</p>
-  <p>Experienced in coordinating <strong>development</strong> activities and collaborating closely with developers and stakeholders across ERP DevOps and BI environments, with a strong focus on <strong>automation</strong>, <strong>business process optimization</strong>, and system integration using Microsoft cloud technologies. Background includes <strong>consulting</strong> and <strong>entrepreneurship</strong>, delivering IT solutions across data analytics, cloud, automation, e-commerce, and enterprise systems, supported by earlier experience in ERP, SaaS, and enterprise software sales and IT management.<span class="rules">
-  <span id="typed"></span></p>
+ 
+  
+  
   <div id="strings">
-    <span></span>
+    <span>Brings a rare combination of deep technical expertise^1000, business acumen^1000, leadership^1000, and hands-on delivery across data engineering^1000, BI^1000, automation^1000, ERP systems^1000, and IT consulting.</span>
   </div>
   <p class="rules">
-    <span id="typed"><a href="./">< BACK</a></span></p>
+    </p>
 </div>
 <div class="pi"><a href="./">π</a></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+ 
+    if (window.typed && typeof window.typed.destroy === 'function') {
+      window.typed.destroy();
+    }
 
+ 
+    window.typed = new Typed('#typed', {
+      stringsElement: '#strings',
+      typeSpeed: 50,      
+      backSpeed: 10,
+      backDelay: 1500,
+      startDelay: 1500,
+      smartBackspace: true,
+      loop: true,
+      loopCount: 1,
+      showCursor: true,
+      cursorChar: '|',
+      autoInsertCss: true,
+      fadeOut: false,
+  fadeOutClass: 'typed-fade-out',
+  fadeOutDelay: 500
+    });
+  });
+</script>
