@@ -1,3 +1,71 @@
     main { top: 100%;}
     .value strong { color: var(--oc-green-2) ;}
 
+   body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999; 
+  background:
+    repeating-linear-gradient(
+      to bottom,
+    /* povodne rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 1px,
+      rgba(0, 0, 0, 0) 2px */
+/* silnejsie
+        rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      rgba(0, 0, 0, 0) 3px */
+        rgba(0, 255, 0, 0.6) 0px,
+      rgba(0, 255, 0, 0.4) 1px,
+      rgba(0, 0, 0, 1) 3px
+    );
+  mix-blend-mode: overlay;
+  opacity: 0.9;
+
+} 
+
+
+
+/* Glitch effect for .key elements */
+.key {
+  position: relative;
+  transition: color 0.1s ease, transform 0.1s ease;
+}
+
+.key:hover {
+  animation: key-glitch 300ms steps(1, end) 1;
+}
+
+@keyframes key-glitch {
+  0% {
+    text-shadow:
+      2px 0 red,
+     -2px 0 cyan;
+    transform: translate(0, 0);
+  }
+  25% {
+    text-shadow:
+     -2px 0 red,
+      2px 0 cyan;
+    transform: translate(1px, -1px);
+  }
+  50% {
+    text-shadow:
+      3px 0 magenta,
+     -3px 0 lime;
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    text-shadow:
+     -1px 0 magenta,
+      1px 0 lime;
+    transform: translate(1px, 0);
+  }
+  100% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+}
+

@@ -54,15 +54,15 @@ color_value: green-4
 # their entries' file path in the `include:` list.
 #
 exclude:
-    - getthisdomain.html
+  - getthisdomain.html
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules/
-    - vendor/
-    - vendor/bundle/
-    - vendor/cache/
-    - vendor/gems/
-    - vendor/ruby/
+  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
