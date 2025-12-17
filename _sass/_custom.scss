@@ -1,6 +1,29 @@
     main { top: 100%;}
     .value strong { color: var(--oc-green-2) ;}
 
+    @media screen and (max-height: 500px) and (orientation: landscape) {
+  main {
+    top: 200% !important;
+  }
+}
+
+
+.btn-copy {
+  background-color: var(--oc-green-9);      /* zelená */
+  color: #000;                    /* farba textu */
+  border: 1px solid var(--oc-green-7);      /* svetlejší zelený okraj */
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.btn-copy:hover {
+  background-color: var(--oc-green-6);
+  border-color: var(--oc-green-5);
+}
+
+
    body::before {
   content: "";
   position: fixed;
@@ -34,7 +57,7 @@
   transition: color 0.1s ease, transform 0.1s ease;
 }
 
-.key:hover, h2:hover {
+.key:hover, h2:hover, h2:active, h2:focus {
   animation: key-glitch 300ms steps(1, end) 1;
 }
 

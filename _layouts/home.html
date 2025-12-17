@@ -93,18 +93,19 @@ layout: default
   </div>
   {% endfor %}
 </div>
-<button id="copy-skills-text" class="ms">Copy skills to Clippboard</button>
+<button id="copy-skills-text" class="btn-copy ms">Copy skills to Clippboard</button>
 <span id="copy-skills-status" class="ms"></span>
 {{ content }}
 <style>
   .menu {
-    position: fixed;
+    position: relative;
     bottom: 50px;
     right: 10px;
-    font-size: 1em;
+    margin: 20px;
+   text-align: right;
   }
 </style>
-<div class="menu"><a href="./profile">NEXT ></a></div>
+<p><div class="menu"><a href="./profile">NEXT ></a></div></p>
 <script>
   const skillsText = `
 Key Skills & Technologies 

@@ -8,6 +8,11 @@ layout: default
   main {
     top: 50% !important;
   }
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+    main {
+      top: 90% !important;
+    }
+  }
   .container {
     margin: 10px auto;
     text-align: center;
@@ -32,7 +37,7 @@ layout: default
   p strong {color: var(--oc-green-3);}
   p a {color: var(--oc-green-7);}
   
-  .rules {text-align: center;  height: 0px;}
+  .rules {text-align: center;  height: 50px;}
   .pi {position: fixed;
       right: 0;
     margin: 30px;
