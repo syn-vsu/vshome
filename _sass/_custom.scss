@@ -7,11 +7,16 @@
   }
 }
 
+button, input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;      
+    border-radius: 0;  
+}
 
 .btn-copy {
-  background-color: var(--oc-green-9);      /* zelená */
-  color: #000;                    /* farba textu */
-  border: 1px solid var(--oc-green-7);      /* svetlejší zelený okraj */
+  background-color: var(--oc-green-9);     
+  color: #000;                   
+  border: 1px solid var(--oc-green-7);     
   padding: 4px 10px;
   border-radius: 3px;
   margin-bottom: 50px;
